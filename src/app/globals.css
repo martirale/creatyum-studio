@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --logo-path: url("/light/");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --logo-path: url("/dark/");
+  }
+}
+
+::selection {
+  background: #000000;
+  color: #ffe000;
+}
+
+.dark ::selection {
+  background: #ffe000;
+  color: #000000;
+}
+
+html {
+  font-size: 18px;
+}
+
+.custom-vh {
+  min-height: 100vh;
+  display: grid;
+  align-content: space-between;
+}
+
+/* HEADERS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-bricolagegrotesque);
+  line-height: 1 !important;
+}
+
+h1 {
+  display: none;
+}
+
+/* NAVBAR */
+.navbar-open {
+  background-image: var(--navbar-open);
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.navbar-close {
+  background-image: var(--navbar-close);
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: -8px;
+}

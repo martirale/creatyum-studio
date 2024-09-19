@@ -1,0 +1,31 @@
+{
+  "name": "creatyum-studio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3020",
+    "build": "next build",
+    "start": "next start -p 3020",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "js-cookie": "^3.0.5",
+    "next": "^14.2.12",
+    "react": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "22.1.0",
+    "@types/react": "18.3.3",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8.4.40",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.6"
+  }
+}
