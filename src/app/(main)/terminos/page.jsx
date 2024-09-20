@@ -1,14 +1,15 @@
-import PrivacyPageContent from "./PrivacyPageContent";
+import React from "react";
+import TermsPageContent from "./TermsPageContent";
 
 export const metadata = {
-  title: "Política de privacidad — Creatyum Media",
+  title: "Términos de uso — Creatyum Media",
   description:
     "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
   openGraph: {
-    title: "Política de privacidad — Creatyum Media",
+    title: "Términos de uso — Creatyum Media",
     description:
       "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
-    url: "https://creatyum.media/privacidad",
+    url: "https://creatyum.media/terminos",
     type: "website",
     images: [
       {
@@ -21,22 +22,22 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Política de privacidad — Creatyum Media",
+    title: "Términos de uso — Creatyum Media",
     description:
       "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
     images: ["https://creatyum.media/creatyum-default-cover.webp"],
   },
-  canonical: "https://creatyum.media/privacidad",
+  canonical: "https://creatyum.media/terminos",
 };
 
-export default function PrivacyPage() {
+export default function TermsPage() {
   return (
     <div className="container mx-auto px-4 py-2 md:px-0">
-      <h1>Política de privacidad</h1>
+      <h1>Términos de uso</h1>
 
       <div className="grid grid-cols-12 gap-4 md:gap-12">
         <div className="col-span-12 md:col-span-8">
-          <PrivacyPageContent />
+          <TermsPageContent />
         </div>
       </div>
     </div>

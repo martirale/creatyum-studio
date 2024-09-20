@@ -1,14 +1,15 @@
-import TermsPageContent from "./TermsPageContent";
+import React from "react";
+import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Términos de uso — Creatyum Media",
+  title: "Creatyum Media — Divulgación sobre diseño y creatividad",
   description:
     "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
   openGraph: {
-    title: "Términos de uso — Creatyum Media",
+    title: "Creatyum Media — Divulgación sobre diseño y creatividad",
     description:
       "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
-    url: "https://creatyum.media/terminos",
+    url: "https://creatyum.media",
     type: "website",
     images: [
       {
@@ -21,24 +22,23 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Términos de uso — Creatyum Media",
+    title: "Creatyum Media — Divulgación sobre diseño y creatividad",
     description:
       "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
     images: ["https://creatyum.media/creatyum-default-cover.webp"],
   },
-  canonical: "https://creatyum.media/terminos",
+  canonical: "https://creatyum.media",
+  rss: "https://creatyum.media/api/rss",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
-export default function TermsPage() {
+export default function LandingLayout({ children }) {
   return (
-    <div className="container mx-auto px-4 py-2 md:px-0">
-      <h1>Términos de uso</h1>
-
-      <div className="grid grid-cols-12 gap-4 md:gap-12">
-        <div className="col-span-12 md:col-span-8">
-          <TermsPageContent />
-        </div>
-      </div>
-    </div>
+    <>
+      <main className="mx-auto pt-4 md:pt-8">{children}</main>
+      <Footer />
+    </>
   );
 }
