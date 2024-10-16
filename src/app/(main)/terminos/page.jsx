@@ -4,11 +4,11 @@ import TermsPageContent from "./TermsPageContent";
 export const metadata = {
   title: "Términos de uso | Creatyum Studio",
   description:
-    "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
+    "Creatyum Studio es un proyecto paralelo de Creatyum enfocado en servicios profesionales de branding y diseño web.",
   openGraph: {
     title: "Términos de uso | Creatyum Studio",
     description:
-      "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
+      "Creatyum Studio es un proyecto paralelo de Creatyum enfocado en servicios profesionales de branding y diseño web.",
     url: "https://studio.creatyum.com/terminos",
     type: "website",
     images: [
@@ -24,7 +24,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Términos de uso | Creatyum Studio",
     description:
-      "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
+      "Creatyum Studio es un proyecto paralelo de Creatyum enfocado en servicios profesionales de branding y diseño web.",
     images: ["https://studio.creatyum.com/creatyum-default-cover.webp"],
   },
   canonical: "https://studio.creatyum.com/terminos",
