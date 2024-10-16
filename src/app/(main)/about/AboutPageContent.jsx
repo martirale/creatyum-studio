@@ -2,11 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import FormatContent from "../../../components/FormatContent";
-import {
-  getAboutStudioContent,
-  getDescriptionContent,
-  getMissionContent,
-} from "../../../lib/api";
+import { getAboutStudioContent, getDescriptionContent } from "../../../lib/api";
+import SidebarMain from "../../../components/sidebar/SidebarMain";
 
 const AboutPageContent = () => {
   const [description, setDescription] = useState([]);
@@ -22,9 +19,6 @@ const AboutPageContent = () => {
 
         const aboutStudioContent = await getAboutStudioContent();
         setContentStudio(aboutStudioContent);
-
-        const missionContent = await getMissionContent();
-        setMission(missionContent);
       } catch (error) {
         console.error("Error fetching data:", error);
         setError(error);
@@ -58,9 +52,8 @@ const AboutPageContent = () => {
 
       {/* SIDEBAR */}
       <div className="col-span-12 mt-8 md:col-span-4 md:mt-0">
-        <div className="rounded-2xl border border-black bg-black text-yellow mb-4 p-4 dark:border-yellow dark:bg-yellow dark:text-black md:rounded-3xl">
-          <h3 className="font-extrabold text-4xl mb-4">Misión</h3>
-          <p>{mission}</p>
+        <div>
+          <SidebarMain />
         </div>
       </div>
     </div>
