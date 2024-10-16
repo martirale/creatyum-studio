@@ -9,7 +9,7 @@ export const metadata = {
     title: "Sobre Creatyum | Creatyum Studio",
     description:
       "Creatyum Studio es un proyecto paralelo de Creatyum enfocado en servicios profesionales de branding y diseño web.",
-    url: "https://creatyum.media/about",
+    url: "https://studio.creatyum.com/about",
     type: "website",
     images: [
       {
@@ -27,7 +27,7 @@ export const metadata = {
       "Creatyum Studio es un proyecto paralelo de Creatyum enfocado en servicios profesionales de branding y diseño web.",
     images: ["https://creatyum.media/creatyum-default-cover.webp"],
   },
-  canonical: "https://creatyum.media/about",
+  canonical: "https://studio.creatyum.com/about",
 };
 
 export default function AboutPage() {
