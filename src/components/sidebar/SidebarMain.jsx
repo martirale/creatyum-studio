@@ -1,10 +1,10 @@
 import React from "react";
-import SidebarInstagram from "./SidebarInstagram";
+import SidebarLatestArticles from "./SidebarLatestArticles";
 
 export default function SidebarMain() {
   return (
     <div>
-      <SidebarInstagram />
+      <SidebarLatestArticles />
     </div>
   );
 }
