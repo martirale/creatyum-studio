@@ -3,11 +3,11 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Creatyum Studio — Branding & Web Design",
+  title: "Creatyum Studio | Branding & Web Design",
   description:
     "Creatyum Studio es un proyecto paralelo de Creatyum enfocado en servicios profesionales de branding y diseño web.",
   openGraph: {
-    title: "Creatyum Studio — Branding & Web Design",
+    title: "Creatyum Studio | Branding & Web Design",
     description:
       "Creatyum Studio es un proyecto paralelo de Creatyum enfocado en servicios profesionales de branding y diseño web.",
     url: "https://studio.creatyum.com",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Creatyum Studio — Branding & Web Design",
+    title: "Creatyum Studio | Branding & Web Design",
     description:
       "Creatyum Studio es un proyecto paralelo de Creatyum enfocado en servicios profesionales de branding y diseño web.",
     images: ["https://studio.creatyum.com/creatyum-default-cover.webp"],

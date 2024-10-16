@@ -2,32 +2,32 @@ import React from "react";
 import PrivacyPageContent from "./PrivacyPageContent";
 
 export const metadata = {
-  title: "Política de privacidad — Creatyum Media",
+  title: "Política de privacidad | Creatyum Studio",
   description:
     "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
   openGraph: {
-    title: "Política de privacidad — Creatyum Media",
+    title: "Política de privacidad | Creatyum Studio",
     description:
       "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
-    url: "https://creatyum.media/privacidad",
+    url: "https://studio.creatyum.com/privacidad",
     type: "website",
     images: [
       {
-        url: "https://creatyum.media/creatyum-default-cover.webp",
+        url: "https://studio.creatyum.com/creatyum-default-cover.webp",
         width: 1200,
         height: 630,
-        alt: "Creatyum Media",
+        alt: "Creatyum Studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Política de privacidad — Creatyum Media",
+    title: "Política de privacidad | Creatyum Studio",
     description:
       "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
-    images: ["https://creatyum.media/creatyum-default-cover.webp"],
+    images: ["https://studio.creatyum.com/creatyum-default-cover.webp"],
   },
-  canonical: "https://creatyum.media/privacidad",
+  canonical: "https://studio.creatyum.com/privacidad",
 };
 
 export default function PrivacyPage() {

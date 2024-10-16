@@ -2,32 +2,32 @@ import React from "react";
 import TermsPageContent from "./TermsPageContent";
 
 export const metadata = {
-  title: "Términos de uso — Creatyum Media",
+  title: "Términos de uso | Creatyum Studio",
   description:
     "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
   openGraph: {
-    title: "Términos de uso — Creatyum Media",
+    title: "Términos de uso | Creatyum Studio",
     description:
       "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
-    url: "https://creatyum.media/terminos",
+    url: "https://studio.creatyum.com/terminos",
     type: "website",
     images: [
       {
-        url: "https://creatyum.media/creatyum-default-cover.webp",
+        url: "https://studio.creatyum.com/creatyum-default-cover.webp",
         width: 1200,
         height: 630,
-        alt: "Creatyum Media",
+        alt: "Creatyum Studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Términos de uso — Creatyum Media",
+    title: "Términos de uso | Creatyum Studio",
     description:
       "En Creatyum ofrecemos artículos y podcasts sobre diseño y creatividad que educan, empoderan y amplían tu perspectiva en el sector creativo.",
-    images: ["https://creatyum.media/creatyum-default-cover.webp"],
+    images: ["https://studio.creatyum.com/creatyum-default-cover.webp"],
   },
-  canonical: "https://creatyum.media/terminos",
+  canonical: "https://studio.creatyum.com/terminos",
 };
 
 export default function TermsPage() {
