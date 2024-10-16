@@ -35,6 +35,12 @@ export const getAboutContent = async () => {
   return dataAbout.data.content;
 };
 
+// ABOUT PAGE CONTENT STUDIO
+export const getAboutStudioContent = async () => {
+  const dataAbout = await fetchAPI("/api/about?fields[0]=studio");
+  return dataAbout.data.studio;
+};
+
 // MISSION
 export const getMissionContent = async () => {
   const dataMission = await fetchAPI("/api/mission?fields[0]=content");
