@@ -57,22 +57,6 @@ export const getTermsContent = async () => {
   return dataTerms.data;
 };
 
-// SPONSORED CONTENT
-export const getSponsoredContent = async () => {
-  const dataSponsored = await fetchAPI(
-    "/api/sponsored?fields[0]=date&fields[1]=content"
-  );
-  return dataSponsored.data;
-};
-
-// TRANSPARENCY CONTENT
-export const getTransparencyContent = async () => {
-  const dataTransparency = await fetchAPI(
-    "/api/transparency?fields[0]=date&fields[1]=content"
-  );
-  return dataTransparency.data;
-};
-
 // SIDEBAR LATEST
 export const getLatestArticles = async (limit = 5) => {
   const data = await fetchAPI(
