@@ -4,13 +4,24 @@ import { sendEmail } from "../lib/brevo";
 import { redirect } from "next/navigation";
 
 export async function handleForm(formData) {
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const company = formData.get("company");
-  const content = formData.get("content");
+  const name = formData.name;
+  const email = formData.email;
+  const company = formData.company;
+  const content = formData.content;
 
   if (!name || !email || !content) {
     return console.log("Por favor, llena todos los campos necesarios");
+  }
+
+  if (
+    name.length > 50 ||
+    email.length > 100 ||
+    company.length > 50 ||
+    content.length > 500
+  ) {
+    return console.log(
+      "Los campos exceden el límite de caracteres permitidos."
+    );
   }
 
   const emailContent = `
