@@ -1,9 +1,12 @@
 "use client";
 
+import React, { useState } from "react";
 import { handleForm } from "../../../utils/ContactAction";
 import DOMPurify from "dompurify";
 
 export default function ContactForm() {
+  const [successMessage, setSuccessMessage] = useState("");
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -21,13 +24,26 @@ export default function ContactForm() {
       content: sanitizedContent,
     };
 
-    await handleForm(data);
+    const result = await handleForm(data);
 
-    window.location.href = "/";
+    if (result) {
+      setSuccessMessage("¡Correo enviado!");
+
+      event.target.reset();
+
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 3000);
+    }
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex flex-col items-center">
+      {successMessage && (
+        <div className="mb-4 p-3 w-full rounded-full font-bold text-center text-[#2F855A] bg-[#B2F5EA]">
+          {successMessage}
+        </div>
+      )}
       <form onSubmit={handleSubmit} className="flex flex-col w-full gap-4">
         <input
           type="text"

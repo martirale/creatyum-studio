@@ -1,7 +1,6 @@
 "use server";
 
 import { sendEmail } from "../lib/brevo";
-import { redirect } from "next/navigation";
 
 export async function handleForm(formData) {
   const name = formData.name;
@@ -10,7 +9,8 @@ export async function handleForm(formData) {
   const content = formData.content;
 
   if (!name || !email || !content) {
-    return console.log("Por favor, llena todos los campos necesarios");
+    console.log("Por favor, llena todos los campos necesarios");
+    return false;
   }
 
   if (
@@ -19,9 +19,8 @@ export async function handleForm(formData) {
     company.length > 50 ||
     content.length > 500
   ) {
-    return console.log(
-      "Los campos exceden el límite de caracteres permitidos."
-    );
+    console.log("Los campos exceden el límite de caracteres permitidos.");
+    return false;
   }
 
   const emailContent = `
@@ -31,19 +30,23 @@ export async function handleForm(formData) {
     <p><strong>Mensaje:</strong><br>${content}</p>
   `;
 
-  await sendEmail({
-    to: [
-      {
-        email: "studio@creatyum.com",
-        name: "Creatyum Studio",
+  try {
+    await sendEmail({
+      to: [
+        {
+          email: "studio@creatyum.com",
+          name: "Creatyum Studio",
+        },
+      ],
+      htmlContent: emailContent,
+      sender: {
+        name: name,
+        email: email,
       },
-    ],
-    htmlContent: emailContent,
-    sender: {
-      name: name,
-      email: email,
-    },
-  });
-
-  redirect("/");
+    });
+    return true;
+  } catch (error) {
+    console.error("Error al enviar el correo:", error);
+    return false;
+  }
 }
