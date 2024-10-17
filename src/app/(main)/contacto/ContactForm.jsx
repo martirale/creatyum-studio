@@ -3,56 +3,60 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { handleForm } from "../../../utils/ContactAction";
-import DOMPurify from "dompurify";
 
 export default function ContactForm() {
-  const [successMessage, setSuccessMessage] = useState("");
+  const [message, setMessage] = useState({ text: "", type: "" });
   const [acceptPrivacyPolicy, setAcceptPrivacyPolicy] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-
     const name = formData.get("name");
     const email = formData.get("email");
     const company = formData.get("company");
     const content = formData.get("content");
-    const sanitizedContent = DOMPurify.sanitize(content);
+
     const data = {
       name,
       email,
       company,
-      content: sanitizedContent,
+      content,
     };
 
     if (!acceptPrivacyPolicy) {
-      setSuccessMessage("Debes aceptar la política de privacidad.");
-      setTimeout(() => {
-        setSuccessMessage("");
-      }, 3000);
+      setMessage({
+        text: "Debes aceptar la política de privacidad.",
+        type: "error",
+      });
+      setTimeout(() => setMessage({ text: "", type: "" }), 3000);
       return;
     }
 
     const result = await handleForm(data);
 
     if (result) {
-      setSuccessMessage("¡Correo enviado!");
-
+      setMessage({ text: "¡Correo enviado!", type: "success" });
       event.target.reset();
       setAcceptPrivacyPolicy(false);
-
-      setTimeout(() => {
-        setSuccessMessage("");
-      }, 3000);
+    } else {
+      setMessage({ text: "Hubo un error al enviar el correo.", type: "error" });
     }
+
+    setTimeout(() => setMessage({ text: "", type: "" }), 3000);
   };
 
   return (
     <div className="flex flex-col items-center">
-      {successMessage && (
-        <div className="mb-4 p-3 w-full rounded-full font-bold text-center text-[#2F855A] bg-[#B2F5EA]">
-          {successMessage}
+      {message.text && (
+        <div
+          className={`mb-4 p-3 w-full rounded-full font-bold text-center ${
+            message.type === "success"
+              ? "text-[#2F855A] bg-[#B2F5EA]"
+              : "text-[#F56565] bg-[#FED7D7]"
+          }`}
+        >
+          {message.text}
         </div>
       )}
       <form onSubmit={handleSubmit} className="flex flex-col w-full gap-4">
